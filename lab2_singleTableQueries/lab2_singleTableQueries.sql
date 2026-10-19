@@ -1,0 +1,11 @@
+﻿--Name: Marc Penalosa
+--Programming Assignment: Lab2 - Single table queries
+
+
+IF EXISTS (SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'L2Person')
+	SELECT TOP 100 * FROM l2person
+GO
+
+IF EXISTS (SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'L2Person')
+	SELECT id, birthYear, fname, lname FROM l2person WHERE birthYear BETWEEN 1960 and 1970
+GO
